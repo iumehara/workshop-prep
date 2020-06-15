@@ -17,7 +17,7 @@ describe('RPS', () => {
   test('wiring', () => {
 
     const spy = new ViewObserverSpy()
-    const result = new Rps(spy).play('ROCK', 'PAPER')
+    new Rps().play(spy,'ROCK', 'PAPER')
 
     expect(spy.p1WinsWasCalled).toEqual(true)
   })
