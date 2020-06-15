@@ -1,6 +1,14 @@
+import {ViewObserverSpy} from './RPS.test'
+
 class Rps {
-  play(p1Hand: string, p2Hand: string): string {
-    return 'player 1 wins'
+  private viewObserver: ViewObserverSpy
+
+  constructor(viewObserver: ViewObserverSpy) {
+    this.viewObserver = viewObserver
+  }
+
+  play(p1Hand: string, p2Hand: string) {
+    this.viewObserver.p1Wins()
   }
 }
 
